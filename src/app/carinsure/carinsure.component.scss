@@ -1,0 +1,32 @@
+li a{
+    padding: 20px;
+    width: 250px;
+    text-align: center;
+    margin: auto;
+    font-weight: bold;
+   color: rgb(102, 102, 102);
+}
+
+
+li a:hover{
+    //padding: 20px;
+   // background-color: rgb(226, 242, 255);
+    background-color: rgb(213, 203, 255);
+    
+}
+body{
+    background-image:url('/src/assets/bg2.jpeg');
+    background-size: cover;
+}
+.bg{
+    background-color: rgb(234, 253, 251);
+}
+.home-container{
+    background-color: #fff;
+    margin: 22%;
+    width:52%;
+}
+.total-pay{
+    display: flex;
+    justify-content: space-between;
+}

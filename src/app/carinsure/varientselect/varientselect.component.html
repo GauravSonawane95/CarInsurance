@@ -1,0 +1,31 @@
+<div class="progress">
+    <div class="progress-bar  bg-warning" role="progressbar" style="width: 18%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+  </div>
+<div class="container w-75 pt-1" >
+    <div class="row pt-3  pb-5">
+        <div class="col-md-6 border bg"  style="padding: 20px;border-radius: 5%;">
+            <div class="mb-3">
+                <label for="id1" class="form-label font"><h5>Select Model</h5></label>
+                <input type="text" class="form-control w-75 brandinput" id="id1" placeholder="Search Model" [(ngModel)]="insuranceData.varientName">
+                <div class="row">
+                    <div class="col-md-12"><ul class="nav nav-underline">
+                        <li class="nav-item" *ngFor="let items of variantsTypes">
+                            <a class="nav-link " [ngClass]="selectVarient === items ?'active':'text-muted'  "  aria-current="page" (click)="setVarient(items)">{{items}}</a>
+                        </li>
+                       </ul>
+                       <ul class="list-group mt-2 varlist cursor">
+                        <li class="list-group-item " *ngFor="let varient of variantList | filter:selectVarient" (click)="NameVarient(varient)">{{varient["Variant Name"]}}</li>
+                       
+                      </ul>
+                    </div> </div>
+                  
+            </div>
+        </div>
+        <div class="col-md-6 border bg" style="border-radius: 5%;">
+            <div class="row mt-2 ms-1">
+                <app-insurancedetails [insuranceData]="insuranceData"></app-insurancedetails>
+            </div>
+        </div>
+      
+    </div>
+</div>

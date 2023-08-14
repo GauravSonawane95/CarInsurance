@@ -1,0 +1,169 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light"  >
+    <div class="container-fluid">
+  
+      <!-- <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button> -->
+      <div class="collapse navbar-collapse justify-content-center d-flex" id="navbarSupportedContent">
+        <a class="navbar-brand homelogo" style="margin-left: 10px;" href="#">
+          <img src="../assets/pngwing.png.png" style="background-color: transparent;" alt="" width="40" height="34"
+            class="d-inline-block align-text-top">
+          <i><b>All Star Insurance</b></i>
+        </a>
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0 ">
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="#">Products</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="#">Claims</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="#">Renewal</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Become an agent</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Resources</a>
+          </li>
+  
+        </ul>
+        <form class="d-flex" style="margin-right: 10px;">
+          <input class="form-control me-2 in" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success" type="submit">Search</button>
+        </form>
+      </div>
+    </div>
+  </nav>
+  <div class="navbg" style="background-image: url('../../assets/bg2.jpeg');">
+    <div style="margin-left: 10%;padding-top:100px; display: flex;">
+      <i>
+        
+        <h3>All Star Insurance <span style="font-size: 20px;">Here we're for all your insurance needs.</span></h3>
+        <p style="font-size: 20px;">Providing service more than 2 crore people wordwide.</p>
+      </i>
+    </div>
+    
+    <div style="margin-left: 20%;margin-top: 20px; height: 70px;">
+      <div class="col-md-8 mt-2 p-2">
+        <ul class="nav" style="background-color:transparent;display: flex;">
+          <li class="nav-item mx-2" style="width: 50px;">
+           <a class="a1" (click)="carClick()"><img src="https://d2h44aw7l5xdvz.cloudfront.net/assets/icons/car-side-view.svg" class="rounded-circle shadow-sm bg-body " alt=""><h6>Car</h6></a>
+          </li>
+          <li class="nav-item mx-2" style="width: 50px;">
+           <a class="a1" (click)="bikeClick()"><img src="https://d2h44aw7l5xdvz.cloudfront.net/assets/icons/motorcycle-side-view.svg" class="rounded-circle shadow-sm bg-body " alt=""><h6>Bike</h6></a>
+          </li>
+          <li class="nav-item mx-2" style="width: 50px;">
+           <a class="a1" (click)="autoClick()"><img src="https://d2h44aw7l5xdvz.cloudfront.net/assets/icons/Autorikshaw.svg" class="rounded-circle shadow-sm bg-body " alt=""><h6>Auto</h6></a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <br>
+    <div style="width: 800px; margin:auto;display: flex"  *ngIf="CarClick==true">
+      <form>
+        <table class="row d-flex">
+          <tr class="col ">
+            <td>
+              <label for="" style="margin-left: 11px;">Car Registration Number</label>
+              <input type="text" class="form-control inputh" placeholder="Registration Number">
+            </td>
+  
+            <td class="btd">
+              <label for="" style="margin-left: 11px;">Mobile (Optional)</label>
+              <input type="text" class="form-control inputh" placeholder="Enter Mobile Number">
+            </td>
+            <td class="btd">
+              <button class="btn btn1" style="margin-left: 20px;">View Price</button>
+            </td>
+            
+          </tr>
+          <tr style="width: 800px;display: flex;height: 40px;">
+            <td><button type="button"  class="btn btntable"  routerLink="/carinsure"><b>Its New Car <i class="bi bi-chevron-right"></i></b></button></td>
+            <td><button class="btn btntable"><b>Dont Have Regi.<i class="bi bi-chevron-right"></i></b></button></td>
+            <td><button class="btn btntable"><b>Renew Digit Policy <i class="bi bi-chevron-right"></i></b></button></td>
+            <td class="form-check"><input style="margin-left: 10px;" class="form-check-input checkbox" type="checkbox" id="disabledFieldsetCheck">
+              <label class="form-check-label" for="disabledFieldsetCheck">
+                &nbsp; I accept all t&c.
+              </label></td>
+          </tr>
+        </table>
+      </form>
+   
+    </div>
+  <!-- For Bikes -->
+    <div style="width: 800px; margin:auto;display: flex"  *ngIf="BikeClick==true">
+      <form>
+        <table class="row d-flex">
+          <tr class="col ">
+            <td>
+              <label for="" style="margin-left: 11px;">Bike Registration Number</label>
+              <input type="text" class="form-control inputh" placeholder="Registration Number" >
+            </td>
+  
+            <td class="form-check" class="btntable1">
+              <label for="" style="margin-left: 11px;">Previous Policy Exp.</label><br>
+              <input style="margin-left: 10px;" class="form-check-input checkbox" name="bikeexp" type="radio" id="bexp1">
+                <label class="form-check-label" for="disabledFieldsetCheck">
+                  &nbsp; Expired
+                </label>
+                <input style="margin-left: 10px;" class="form-check-input checkbox" name="bikeexp" type="radio" id="bexp2">
+                <label class="form-check-label" for="">
+                  &nbsp;Not Expired
+                </label>
+            </td>
+            <td class="btd">
+              <button class="btn btn1" style="margin-left: 20px;">View Price</button>
+            </td>
+            
+          </tr>
+          <tr style="width: 800px;display: flex;height: 40px;">
+            <td><button class="btn btntable">Dont Have Reg No.</button></td>
+            <td><button class="btn btntable">Its New Bike</button></td>
+            <td><button class="btn btntable">Renew Digit Policy</button></td>
+            <td class="form-check"><input style="margin-left: 10px;" class="form-check-input checkbox" type="checkbox" id="disabledFieldsetCheck">
+              <label class="form-check-label" for="disabledFieldsetCheck">
+                &nbsp; I accept all t&c.
+              </label></td>
+          </tr>
+        </table>
+      </form>
+   
+    </div>
+  
+    <!-- Auto  -->
+  
+    <div style="width: 800px; margin:auto;display: flex"  *ngIf="AutoClick==true">
+      <form>
+        <table class="row d-flex">
+          <tr class="col ">
+            <td>
+              <label for="" style="margin-left: 11px;">Auto Registration Number</label>
+              <input type="text" class="form-control inputh" placeholder="Registration Number" required>
+            </td>
+  
+            <td class="btd">
+              <label for="" style="margin-left: 11px;">Mobile (Optional)</label>
+              <input type="text" class="form-control inputh" placeholder="Enter Mobile Number" required>
+            </td>
+            <td class="btd">
+              <button class="btn btn1" style="margin-left: 20px;">View Price</button>
+            </td>
+            
+          </tr>
+          <tr style="width: 800px;display: flex;height: 40px;">
+            <td><button class="btn btntable">Dont Have Reg No.</button></td>
+            <td><button class="btn btntable">Its New Auto</button></td>
+            <td><button class="btn btntable">Renew Digit Policy</button></td>
+            <td class="form-check"><input style="margin-left: 10px;" class="form-check-input checkbox" type="checkbox" id="disabledFieldsetCheck">
+              <label class="form-check-label" for="disabledFieldsetCheck">
+                &nbsp; I accept all t&c.
+              </label></td>
+          </tr>
+        </table>
+      </form>
+   
+    </div>
+  
+  </div>
+  <router-outlet></router-outlet>

@@ -1,0 +1,66 @@
+<div class="progress">
+  <div class="progress-bar  bg-warning" role="progressbar" style="width: 28%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+</div>
+<div class="container w-75 pt-1">
+    <div class="row pt-3 pb-5">
+        <div class="col-md-6 border bg"  style="padding: 20px;border-radius: 5%;">
+            <div class="mb-3">
+                <label for="id1" class="form-label font"><h5>Insurance Details</h5></label>
+                <!-- <input type="text" class="form-control w-75 brandinput" id="id1" placeholder="Search Model" [(ngModel)]="insuranceData.varientName"> -->
+                <div class="row">
+                    <div class="col-md-12">
+                        <form [formGroup]="regiForm" (ngSubmit)="save()">
+                            <div class="row">
+                              <div class="col mt-3">
+                                <label><h6>Select Year</h6></label>
+                                <select class="form-select" aria-label="Default select example" formControlName="year">
+                                    <option selected *ngFor="let year of Years">{{year}}</option>
+                                </select>
+                              </div>
+                              <div class="col mt-3">
+                                <label><h6>Select Month</h6></label>
+                                <select class="form-select" aria-label="Default select example" formControlName="month">
+                                    <option selected *ngFor="let month of Month">{{month}}</option>
+                                </select>
+                              </div>
+                              <div class="mt-3">
+                                <label><h6>Select City</h6></label>
+                                <select class="form-select" aria-label="Default select example" formControlName="city">
+                                    <option selected *ngFor="let cities of City">{{cities}}</option>
+                                </select>
+
+                              </div>
+                        <div class="row mt-4 bg">
+                            <h6>When will your policy going to expire.</h6>
+                              <div class="col mt-2">
+                                
+                                <label><h6>Own Damage</h6></label>
+                                <input type="date" class="form-control" formControlName="ownexp">
+                              </div>
+                              <div class="col mt-2">
+                                <label><h6>Third Party</h6></label>
+                                <input type="date" class="form-control" formControlName="thirdpartyexp">
+                              </div>
+                              <div class="form-check form-switch mt-3 ms-3">
+                                <input class="form-check-input" type="checkbox" id="flexSwitchCheckChecked" >
+                                <label class="form-check-label" for="flexSwitchCheckChecked">Same as
+                                    Comprahensive</label>
+                        </div></div>
+                            </div>
+                            <div>
+                                <button type="submit" class="btn mt-4 btntable">Proceed</button>
+                            </div>
+                          </form>
+                    </div> 
+                </div>
+                   
+            </div>
+        </div>
+        <div class="col-md-6 border bg" style="border-radius: 5%;">
+            <div class="row mt-2 ms-1">
+                <app-insurancedetails [insuranceData]="insuranceData"></app-insurancedetails>
+            </div>
+        </div>
+      
+    </div>
+</div>
