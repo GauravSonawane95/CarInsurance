@@ -5,7 +5,7 @@ import { HttpClient } from '@angular/common/http';
   providedIn: 'root'
 })
 export class HttpserviceService {
-  baseUrl:string="http://localhost:3000/";
+  baseUrl:string="https://carinsurenceapi.onrender.com/";
 
   httpHeader:HttpHeaders = new HttpHeaders()
                            .set("Content-type","application/json");
