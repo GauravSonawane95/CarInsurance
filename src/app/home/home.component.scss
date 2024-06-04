@@ -50,8 +50,7 @@ div div ul li .a1 img{
     background-color: rgb(227, 249, 255);
     width: 100ppx;
     background-size: cover;
-    height: 500px;
-    
+    height: 500px;  
 }
 
 .btn1{
@@ -134,4 +133,13 @@ label{
 body{
     background-image:url('/src/assets/bg2.jpeg');
     background-size: cover;
+}
+.shadowbox{
+    box-shadow: 0px 20px 12px -1px rgba(173, 171, 171, 0.534);
+    position: sticky;
+    top: 0%;
+    z-index: 5;
+}
+.active{
+    background-color: rgb(196, 174, 201);
 }
