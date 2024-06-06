@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { HttpserviceService } from 'src/app/core/httpservice.service';
 import { ServiceService } from '../carservice/service.service';
+import { Observable } from 'rxjs';
+import { LoaderserviceService } from '../loder/loaderservice.service';
 
 @Component({
   selector: 'app-varientselect',
@@ -14,13 +16,21 @@ variantsTypes:string[]=[];
 variantList:any[]=[];
 selectVarient:any='';
 insuranceData:any
-  constructor(private Actiserv:ActivatedRoute,private http:HttpserviceService,private carinsure:ServiceService,private router:Router){ 
+isLoading$: Observable<boolean>;
+
+  constructor(private Actiserv:ActivatedRoute,private http:HttpserviceService,private carinsure:ServiceService,private router:Router ,private loder:LoaderserviceService){ 
 this.selectModel=this.Actiserv.snapshot.paramMap.get('modelName');
+this.isLoading$ = this.loder.loading$;
+
+
   }
   ngOnInit(): void {
-    this.getVarient()  
+    this.getVarient() 
+    
+    
   }
   getVarient(){
+    this.loder.show(); 
     const endPoint = 'variant?'+'modelName='+this.selectModel;
     this.http.getDataFromServer(endPoint).subscribe((response: any) => {
       if (response && response.length > 0 && response[0].modelList.length > 0 ) {
@@ -30,15 +40,24 @@ this.selectModel=this.Actiserv.snapshot.paramMap.get('modelName');
           this.selectVarient=this.variantsTypes[0];
           this.insuranceData=this.carinsure.carInsuranceModel;
         console.log(this.variantsTypes)
+        this.loder.hide();
+       
+      
       }
       
-  })
+    },
+      error => {
+        this.loder.hide();
+        
+      }
+    )
   }
 
   setVarient(items:string){
     this.selectVarient=items;
   
   }
+  
 
   NameVarient(obj:any){
     this.insuranceData.varientName=obj['Variant Name']

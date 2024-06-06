@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component , Input} from '@angular/core';
 
 @Component({
   selector: 'app-yearmonth',
@@ -6,5 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./yearmonth.component.scss']
 })
 export class YearmonthComponent {
+  
+  @Input() isLoading : boolean = false;
+  }
 
-}
