@@ -58,29 +58,29 @@
       </div>
     </div>
     <br>
-    <div style="width: 800px; margin:auto;display: flex"  *ngIf="CarClick==true">
+    <div class="wt" style=" margin:auto;display: flex"  *ngIf="CarClick==true">
       <form>
         <table class="row d-flex">
           <tr class="col ">
-            <td>
+            <td class="first-column">
               <label for="" style="margin-left: 11px;">Car Registration Number</label>
               <input type="text" class="form-control inputh" placeholder="Registration Number">
             </td>
   
-            <td class="btd">
+            <td class="btd second-column">
               <label for="" style="margin-left: 11px;">Mobile (Optional)</label>
               <input type="text" class="form-control inputh" placeholder="Enter Mobile Number">
             </td>
-            <td class="btd">
-              <button class="btn btn1" style="margin-left: 20px;">View Price</button>
+            <td class="btd second-column">
+              <button class="btn btn1" style="margin-left: 20px;width:135px;">View Price</button>
             </td>
             
           </tr>
-          <tr style="width: 800px;display: flex;height: 40px;">
-            <td><button type="button"  class="btn btntable"  routerLink="/carinsure"><b>Its New Car <i class="bi bi-chevron-right"></i></b></button></td>
-            <td><button class="btn btntable"><b>Dont Have Regi.<i class="bi bi-chevron-right"></i></b></button></td>
-            <td><button class="btn btntable"><b>Renew Digit Policy <i class="bi bi-chevron-right"></i></b></button></td>
-            <td class="form-check"><input style="margin-left: 10px;" class="form-check-input checkbox" type="checkbox" id="disabledFieldsetCheck">
+          <tr class="second-column"  >
+            <td class="second-column"><button type="button"  class="btn btntable"  routerLink="/carinsure"><b>Its New Car <i class="bi bi-chevron-right"></i></b></button></td>
+            <td class="second-column"><button class="btn btntable"><b>Dont Have Regi.<i class="bi bi-chevron-right"></i></b></button></td>
+            <td class="second-column"><button class="btn btntable"><b>Renew Digit Policy <i class="bi bi-chevron-right"></i></b></button></td>
+            <td class="second-column"  style="width: 180px;"><input style="margin-left: 10px" class="form-check-input checkbox" type="checkbox" id="disabledFieldsetCheck">
               <label class="form-check-label" for="disabledFieldsetCheck">
                 &nbsp; I accept all t&c.
               </label></td>
@@ -90,7 +90,7 @@
    
     </div>
   <!-- For Bikes -->
-    <div style="width: 800px; margin:auto;display: flex"  *ngIf="BikeClick==true">
+    <div style="margin:auto;display: flex"  *ngIf="BikeClick==true">
       <form>
         <table class="row d-flex">
           <tr class="col ">
@@ -115,7 +115,7 @@
             </td>
             
           </tr>
-          <tr style="width: 800px;display: flex;height: 40px;">
+          <tr class="wt" style="display: flex;height: 40px;">
             <td><button class="btn btntable">Dont Have Reg No.</button></td>
             <td><button class="btn btntable">Its New Bike</button></td>
             <td><button class="btn btntable">Renew Digit Policy</button></td>
@@ -131,7 +131,7 @@
   
     <!-- Auto  -->
   
-    <div style="width: 800px; margin:auto;display: flex"  *ngIf="AutoClick==true">
+    <div class="wt" style=" margin:auto;display: flex"  *ngIf="AutoClick==true">
       <form>
         <table class="row d-flex">
           <tr class="col ">
@@ -149,7 +149,7 @@
             </td>
             
           </tr>
-          <tr style="width: 800px;display: flex;height: 40px;">
+          <tr class="wt" style="display: flex;height: 40px;">
             <td><button class="btn btntable">Dont Have Reg No.</button></td>
             <td><button class="btn btntable">Its New Auto</button></td>
             <td><button class="btn btntable">Renew Digit Policy</button></td>
