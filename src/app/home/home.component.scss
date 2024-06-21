@@ -160,6 +160,67 @@ tr{
 
 /* Responsive Styles */
 @media (max-width: 768px) {
+    
+    .second-column{
+        display:block;
+    }
+.first-column{
+    display:inline-block;
+    margin-top: 10px;
+}
+
+table{
+    margin-left: 30px;
+    height: 500px;
+    width: 350px;
+    margin-top: -90px;
+   text-align: center;
+    
+    
+}
+tr{
+    width: 300px;
+    
+    height: 200px;
+    
+  }
+  nav{
+    position:sticky;
+    height: 380px;
+    display: flex;
+  }
+  .homelogo{
+    margin-top: -310px;
+    
+  }
+  .wt{
+    width: 100px;
+    height: 200%;
+    
+   
+  }
+  .wt td button{
+    width: 180px;
+    margin-left: 70px;
+    margin-top: 20px;
+   }
+
+   input{
+    text-align: center;
+   }
+   form{
+    margin-left: -150px;
+    width: 350px;
+    height: 500px;
+    
+   }
+   ul{
+    position:absolute;
+    top:50px
+   }
+   .navbg{
+    height: 850px ; 
+   }
 
 }
 

@@ -52,6 +52,24 @@ body{
     background-color: rgb(213, 203, 255);
     
 }
+
+@media (max-width: 768px) {
+
+    nav{
+        position:sticky;
+        height: 380px;
+        display: flex;
+      } 
+      .homelogo{
+        margin-top: -310px;
+        
+      }
+      ul{
+        position:absolute;
+        top:50px
+       }
+}
+
 @media (max-width: 480px) {
 
     nav{
